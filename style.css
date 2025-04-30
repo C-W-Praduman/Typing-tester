@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #333;
+}
+
+#mainContainer {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#leftPanel {
+  flex: 2;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#displayText {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 12px;
+  height: 200px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#typingInput {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#typingInput:focus {
+  border-color: #4facfe;
+}
+
+#btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#btn:hover:not(:disabled) {
+  background: #00c3ff;
+}
+
+#rightPanel {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-left: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+#rightPanel span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#timerDisplay {
+  font-size: 36px;
+  color: #ff4d4d;
+}
+
+#speedDisplay,
+#Accuracy {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #mainContainer {
+    flex-direction: column;
+  }
+
+  #rightPanel {
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+}
